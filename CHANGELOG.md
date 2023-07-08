@@ -1,4 +1,13 @@
-# 0.1.0 (2023-07-08)
+# [0.3.0](https://github.com/Wivik/doc-as-code-template/compare/v0.1.0...v0.3.0) (2023-07-08)
+
+
+### Features
+
+* update workflow ([accced3](https://github.com/Wivik/doc-as-code-template/commit/accced374df14f05dd8399859d3d7e24af7419ad))
+
+
+
+# [0.1.0](https://github.com/Wivik/doc-as-code-template/compare/6ff755aa49b0fb772d2f2e3ad549521ae6e9d9c3...v0.1.0) (2023-07-08)
 
 
 ### Bug Fixes
