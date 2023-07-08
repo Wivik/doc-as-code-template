@@ -38,7 +38,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: "${{ env.REGISTRY }}/wivik/doc-as-code-example:${{ steps.changelog.outputs.tag }},${{ env.REGISTRY }}/wivik/doc-as-code-example:latest"
-          labels: "${{ env.REGISTRY }}/wivik/doc-as-code-example:${{ steps.changelog.outputs.tag }},${{ env.REGISTRY }}/wivik/doc-as-code-example:latest"
+          tags: "${{ env.REGISTRY }}/wivik/doc-as-code-template:${{ steps.changelog.outputs.tag }},${{ env.REGISTRY }}/wivik/doc-as-code-template:latest"
+          labels: "${{ env.REGISTRY }}/wivik/doc-as-code-template:${{ steps.changelog.outputs.tag }},${{ env.REGISTRY }}/wivik/doc-as-code-template:latest"
           file: Dockerfile
           context: "{{defaultContext}}:container"
