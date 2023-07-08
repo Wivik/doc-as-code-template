@@ -42,3 +42,4 @@ jobs:
           labels: "${{ env.REGISTRY }}/wivik/doc-as-code-template:${{ steps.changelog.outputs.tag }},${{ env.REGISTRY }}/wivik/doc-as-code-template:latest"
           file: Dockerfile
           context: "{{defaultContext}}:container"
+
