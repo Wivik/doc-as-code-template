@@ -1,0 +1,31 @@
+name: Release the template
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout content
+        uses: actions/checkout@v3
+
+      - name: Produce changelog
+        uses: TriPSs/conventional-changelog-action@v3.19.0
+        id: changelog
+        with:
+          version-file: './version_file.json'
+          github-token: ${{ secrets.github_token }}
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v1
+        if: ${{ steps.changelog.outputs.tag }}
+        with:
+          body: ${{ steps.changelog.outputs.clean_changelog }}
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          files: |
+            template/template.odt
